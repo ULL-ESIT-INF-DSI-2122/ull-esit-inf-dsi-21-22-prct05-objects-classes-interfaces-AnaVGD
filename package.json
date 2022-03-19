@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "coverage": "nyc npm test  && nyc report --reporter=text-lcov | coveralls && rm -rf .nyc_output",
-    "start": "tsc-watch --onSuccess \"node dist/pruebas.js\"",
+    "start": "tsc-watch --onSuccess \"node dist/Ejercicio-01/combat.js\"",
     "doc": "typedoc"
   },
   "keywords": [],
@@ -28,6 +28,8 @@
     "typedoc": "^0.22.13"
   },
   "dependencies": {
-    "prompts": "^2.4.2"
+    "@types/inquirer": "^8.2.0",
+    "prompts": "^2.4.2",
+    "readline-sync": "^1.4.10"
   }
 }

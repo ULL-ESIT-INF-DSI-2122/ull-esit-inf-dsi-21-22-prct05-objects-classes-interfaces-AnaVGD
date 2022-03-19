@@ -6,28 +6,34 @@ import {Pokemon} from './pokemon';
  * array de pokemosn
  */
 export class Pokedex {
-  constructor(private pokemons: Pokemon[]) {
+  constructor(private _pokedex: Pokemon[]) {
   }
 
   /**
    * getPokemosn getter de pokemons, para acceder a los pokemons
    * @returns devuelve el pokemon
    */
-  getPokemons() {
-    return this.pokemons;
+  public get pokedex(): Pokemon[] {
+    return this._pokedex;
   }
 
+  /**
+   * Método `addPokemon` se encarga de añadir pokemons al pokedex, primero
+   * comprueba si ya exite ese pokeman en la pokedex
+   * @param pokemon Pokemon a añadir
+   * @returns Devuelve si si agrego o si ya exite en la pokedex
+   */
   addPokemon(pokemon: Pokemon) {
-    let str: boolean = true;
-    if (this.pokemons.length !== 0 ) {
-      this.pokemons.forEach((pok) => {
+    let exist: boolean = true;
+    if (this.pokedex.length !== 0 ) {
+      this.pokedex.forEach((pok) => {
         if (pok === pokemon) {
-          str = false;
+          exist = true;
         }
       });
     }
-    if (str) {
-      this.pokemons.push(pokemon);
+    if (!exist) {
+      this.pokedex.push(pokemon);
       return 'incluido';
     } else {
       return 'Ya existe';

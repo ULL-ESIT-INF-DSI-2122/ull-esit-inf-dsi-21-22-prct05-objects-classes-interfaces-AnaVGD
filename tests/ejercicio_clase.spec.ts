@@ -19,13 +19,13 @@ describe('Ejercicio 1', () => {
       expect(prub.den).not.to.be.eql(NaN);
       expect(aux.den).to.be.eql(NaN);
     });
-    // it('Un número racional debe poder simplificarse.', () => {
-    //   let prub2: Racional = new Racional(4, 8);
-    //   prub2.simpl();
-    //   // console.log(prub2.print());
-    //   expect(prub2.simpl()).to.been.equal('1/2');
-    // });
+    it('Un número racional debe poder simplificarse.', () => {
+      let prub2: Racional = new Racional(4, 8);
+      prub2.simpl();
+      expect(prub2.print()).to.been.equal('1/2');
+    });
     // it('Un número racional debe poder invertirse.', () => {
+    //   prub.inver()
     //   expect(numeroRa.invert()).to.be.eql();
     // });
     // it('Dos números racionales deben poder sumarse.', () => {
