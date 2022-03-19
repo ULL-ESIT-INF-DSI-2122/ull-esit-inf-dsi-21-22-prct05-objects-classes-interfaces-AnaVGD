@@ -24,7 +24,8 @@ export class Pokedex {
    * @returns Devuelve si si agrego o si ya exite en la pokedex
    */
   addPokemon(pokemon: Pokemon) {
-    let exist: boolean = true;
+    let exist: boolean = false;
+    // console.log(this.pokedex, exist);
     if (this.pokedex.length !== 0 ) {
       this.pokedex.forEach((pok) => {
         if (pok === pokemon) {
@@ -32,11 +33,13 @@ export class Pokedex {
         }
       });
     }
-    if (!exist) {
-      this.pokedex.push(pokemon);
-      return 'incluido';
-    } else {
+    // console.log(this.pokedex, exist);
+    if (exist) {
       return 'Ya existe';
+    } else {
+      this.pokedex.push(pokemon);
+      // console.log(this.pokedex);
+      return 'incluido';
     }
   }
 }

@@ -14,13 +14,13 @@ describe('Ejercicio 1', () => {
   let vecPoke: Pokemon[];
   let ataque: Combat;
   let ataque1: Combat;
-  beforeEach (() => {
+  beforeEach(() => {
     poke1 = new Pokemon('Bulbasaur', 20, 20, 'hierba', 49, 49, 45, 45);
     poke2 = new Pokemon('Squirtle', 4, 17, 'agua', 48, 65, 13, 44);
     poke3 = new Pokemon('Pikachu', 20, 12, 'heriva', 55, 40, 90, 35);
     poke4 = new Pokemon('Charmander', 23, 8, 'hierva', 52, 58, 65, 39);
     poke5 = new Pokemon('Charmander', 23, 8, 'nada', 52, 58, 65, 39);
-    vecPoke = [poke1, poke2, poke3];
+    vecPoke = [poke1];
     poke = new Pokedex(vecPoke);
     ataque = new Combat(poke1, poke2);
     ataque1 = new Combat(poke1, poke5);
@@ -62,13 +62,13 @@ describe('Ejercicio 1', () => {
       expect(poke instanceof Pokedex).to.be.true;
     });
     it('Tiene un atributo pokedex', () => {
-      expect(poke.pokedex).to.be.eql([poke1, poke2, poke3]);
+      expect(poke.pokedex).to.be.eql([poke1]);
     });
     it('Permite añadir pokemons', () => {
-      expect(poke.addPokemon(poke4)).to.be.eql('incluido');
+      expect(poke.addPokemon(poke5)).to.be.eql('incluido');
     });
     it('No permite añadir pokemons exitentes', () => {
-      expect(poke.addPokemon(poke3)).to.be.eql('Ya existe');
+      expect(poke.addPokemon(poke1)).to.be.eql('Ya existe');
     });
   });
   describe('Clase Combat', () => {

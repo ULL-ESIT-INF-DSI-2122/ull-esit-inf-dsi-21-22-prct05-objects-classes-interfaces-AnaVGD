@@ -2,7 +2,7 @@ import 'mocha';
 import {expect} from 'chai';
 import {Racional} from '../src/Ejercicio_clase/racional';
 
-describe('Ejercicio 1', () => {
+describe('Ejercicio clase', () => {
   let prub: Racional;
   let prub1: Racional;
   beforeEach (() => {
