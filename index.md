@@ -266,7 +266,7 @@ start(print: boolean): string {
 let ataque = new Combat(poke1, poke3);
 ```
 
-### Conecta 4
+### Conecta 4<a name="id2"></a>
 
 El objetivo de este ejercicio es hacer un conecta 4, en el que en una rejilla de 6 filas y 7 columnas, dos jugadores se turnan para ir colocando un conjunto de fichas dejándolas caer por alguna de las siete columnas de la rejilla. Cada jugador dispone de un total de 21 fichas de un color diferente.
 
