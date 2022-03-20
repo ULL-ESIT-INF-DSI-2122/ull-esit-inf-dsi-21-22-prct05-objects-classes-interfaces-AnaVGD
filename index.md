@@ -483,7 +483,7 @@ winnerCheck(fil: number, col: number, ficha: string) {
 }
 ```
 
-#### Invocacion
+#### Invocación
 
 ```typescript 
 let teb = new Tablero();
@@ -601,7 +601,7 @@ inicio(print: boolean, colm: number = -1): string {
 }
 ```
 
-#### Invocacion
+#### Invocación
 ```typescript
 let play = new Juego(fichas);
 play.inicio(true);

@@ -5,7 +5,7 @@
   "main": "pokedex.js",
   "scripts": {
     "test": "mocha",
-    "coverage": "nyc npm test  && nyc report --reporter=text-lcov | coveralls && rm -rf .nyc_output",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls && rm -rf .nyc_output",
     "start": "tsc-watch --onSuccess \"node dist/Ejercicio-02/juego.js\"",
     "doc": "typedoc"
   },
